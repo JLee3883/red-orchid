@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts --openssl-legacy-provider start",
     "seed": "node seeds/seed.js",
     "watch": "nodemon server.js"
   },
