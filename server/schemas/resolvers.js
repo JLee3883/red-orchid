@@ -12,22 +12,22 @@ const resolvers = {
     },
   },
   Mutation: {
-    login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email });
+    // login: async (parent, { email, password }) => {
+    //   const profile = await Profile.findOne({ email });
 
-      if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
-      }
+    //   if (!profile) {
+    //     throw new AuthenticationError('No profile with this email found!');
+    //   }
 
-      const correctPw = await profile.isCorrectPassword(password);
+    //   const correctPw = await profile.isCorrectPassword(password);
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
-      }
+    //   if (!correctPw) {
+    //     throw new AuthenticationError('Incorrect password!');
+    //   }
 
-      const token = signToken(profile);
-      return { token, profile };
-    },
+    //   const token = signToken(profile);
+    //   return { token, profile };
+    // },
     // createMatchup: async (parent, args) => {
     //   const matchup = await Matchup.create(args);
     //   return matchup;
