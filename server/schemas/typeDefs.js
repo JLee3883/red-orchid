@@ -11,13 +11,21 @@ type User {
     username: String
 }
 
-type flowTalk{
+type dailyInfo {
+    date: String
+    flow: Int
+    pain: Int
+    mood: String
+    cravings: String
+    notes: String
+}
+
+type flowTalk {
     _id: ID
     flowTalkTitle: String
     flowTalkText: String
     flowTalkAuthor: String
     createdAt: String
-    
 }
 
 type Query {
@@ -26,11 +34,11 @@ type Query {
 
 type Mutation {
     createFlowTalk(flowTalkTitle: String!, flowTalkText: String!, flowTalkAuthor: String!) : flowTalk
+
+    createdailyInfo(date: String!, flow: Int!, pain: Int!, mood: String!, cravings: String!, notes: String!) : dailyInfo
+
     login(email: String!, password: String!): Auth
-
 }
-
-
 `;
 
 module.exports = typeDefs;
