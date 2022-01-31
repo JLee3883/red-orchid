@@ -8,7 +8,7 @@ type Auth {
 }
 
 type User {
-    
+    username: String
 }
 
 type flowTalk{
@@ -26,7 +26,8 @@ type Query {
 
 type Mutation {
     createFlowTalk(flowTalkTitle: String!, flowTalkText: String!, flowTalkAuthor: String!) : flowTalk
-    login: 
+    login(email: String!, password: String!): Auth
+
 }
 
 
