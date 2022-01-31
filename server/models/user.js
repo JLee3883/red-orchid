@@ -45,4 +45,4 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 const User = model("User", userSchema);
 
-module.exports = Matchup;
+module.exports = User;

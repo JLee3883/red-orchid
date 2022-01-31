@@ -35,6 +35,6 @@ const dailyInfoSchema = new Schema({
   },
 });
 
-const Tech = model("Tech", techSchema);
+const dailyInfo = model("dailyInfo", dailyInfoSchema);
 
-module.exports = Tech;
+module.exports = dailyInfo;

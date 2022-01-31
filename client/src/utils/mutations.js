@@ -24,27 +24,27 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const CREATE_FLOW_TITLE = gql`
-//   mutation createFlowTitle($tech1: String!, $tech2: String!) {
-//     createMatchup(tech1: $tech1, tech2: $tech2) {
-//       _id
-//       tech1
-//       tech2
-//     }
-//   }
-// `;
+export const CREATE_FLOWTALK = gql`
+  mutation createFlowTalk($flowTalkTitle: String!, $flowTalkText: String!, $flowTalkAuthor: String!) {
+    createMatchup(flowTalkTitle: $flowTalkTitle, flowTalkText: $flowTalkText, flowTalkAuthor: $flowTalkAuthor) {
+      _id
+      flowTalkTitle
+      flowTalkText
+      flowTalkAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
 
 export const ADD_COMMENT = gql`
-  mutation addComment(
-    $commentId: ID!
-    $commentText: String!
-    $commentAuthor: String!
-  ) {
-    addComment(
-      commentId: $thoughtId
-      commentText: $commentText
-      commentAuthor: $commentAuthor
-    ) {
+  mutation addComment($commentId: ID!, $commentText: String!) {
+    addComment(commentId: $commentId, commentText: $commentText) {
       _id
       commentText
       commentAuthor
