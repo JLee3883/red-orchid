@@ -44,5 +44,28 @@
         "createdAt": "01/28/2022 23:43"
       }
     ]
+  },
+  {
+    "flowTalkAuthor": "annielnguyen",
+    "flowTalkTitle": "First Cycle with the Pill",
+    "flowTalkText": "Since starting the pill, I noticed that my flow has been lighter. Cramps are not as bad as they used to be.  My acne has improved, but I've noticed that I've gained some weight. Overall, I'm feeling good today.",
+    "createdAt": "01/31/2022 10:05",
+    "comment": [
+      {
+        "text": "Do you reccomend the pill over other forms of contraceptives?",
+        "author": "jlee3883",
+        "createdAt": "01/31/2022 10:10"
+      },
+      {
+        "text": "I don't take the pill because I'm afraid to gain weight, realistically I haven't been using anything and just pushing my luck",
+        "author": "jamieatsrice",
+        "createdAt": "01/31/2022 10:13"
+      },
+      {
+        "text": "I'm glad the pill is working out for you!",
+        "author": "elmiratash",
+        "createdAt": "01/31/2022 10:23"
+      }
+    ]
   }
 ]
