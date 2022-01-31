@@ -24,30 +24,30 @@ export const ADD_USER = gql`
   }
 `;
 
-export const CREATE_FLOW_TITLE = gql`
-  mutation createFlowTitle($tech1: String!, $tech2: String!) {
-    createMatchup(tech1: $tech1, tech2: $tech2) {
-      _id
-      tech1
-      tech2
-    }
-  }
-`;
+// export const CREATE_FLOW_TITLE = gql`
+//   mutation createFlowTitle($tech1: String!, $tech2: String!) {
+//     createMatchup(tech1: $tech1, tech2: $tech2) {
+//       _id
+//       tech1
+//       tech2
+//     }
+//   }
+// `;
 
 export const ADD_COMMENT = gql`
   mutation addComment(
-    $thoughtId: ID!
+    $commentId: ID!
     $commentText: String!
     $commentAuthor: String!
   ) {
     addComment(
-      thoughtId: $thoughtId
+      commentId: $thoughtId
       commentText: $commentText
       commentAuthor: $commentAuthor
     ) {
       _id
-      thoughtText
-      thoughtAuthor
+      commentText
+      commentAuthor
       createdAt
       comments {
         _id
