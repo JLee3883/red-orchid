@@ -1,5 +1,6 @@
 const { flowTalk, dailyInfo, User} = require('../models');
 const { signToken } = require('../utils/auth');
+const { AuthenticationError} = require("apollo-server-express");
 
 const resolvers = {
   Query: {
@@ -15,7 +16,7 @@ const resolvers = {
         throw new AuthenticationError('No profile with this email found!');
       }
 
-      const correctPw = await User.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError('Incorrect password!');
