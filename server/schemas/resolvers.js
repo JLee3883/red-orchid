@@ -29,6 +29,11 @@ const resolvers = {
       const flowTalkData = await flowTalk.create(args);
       return flowTalkData;
     },
+
+    createdailyInfo: async (parent, args) => {
+      const dailyInfoData = await dailyInfo.create(args);
+      return dailyInfoData;
+    },
   }
 };
 
