@@ -9,6 +9,7 @@ const flowTalkSchema = new Schema({
     maxlength: 24,
     trim: true,
     unique: true,
+    // when it says "unique" does it mean unique in the user, or on the whole database
   },
   flowTalkText: {
     type: String,
