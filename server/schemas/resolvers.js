@@ -1,46 +1,73 @@
-const { Tech, Matchup } = require('../models');
+const { flowTalk, dailyInfo, User} = require('../models');
 const { signToken } = require('../utils/auth');
+const { AuthenticationError} = require("apollo-server-express");
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+   flowTalks : async () => {
+     return await flowTalk.find()
+   } 
   },
   Mutation: {
-    // login: async (parent, { email, password }) => {
-    //   const profile = await Profile.findOne({ email });
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
-    //   if (!profile) {
-    //     throw new AuthenticationError('No profile with this email found!');
-    //   }
+      if (!user) {
+        throw new AuthenticationError('No profile with this email found!');
+      }
 
-    //   const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
-    //   if (!correctPw) {
-    //     throw new AuthenticationError('Incorrect password!');
-    //   }
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
 
-    //   const token = signToken(profile);
-    //   return { token, profile };
-    // },
-    // createMatchup: async (parent, args) => {
-    //   const matchup = await Matchup.create(args);
-    //   return matchup;
-    // },
-    // createVote: async (parent, { _id, techNum }) => {
-    //   const vote = await Matchup.findOneAndUpdate(
-    //     { _id },
-    //     { $inc: { [`tech${techNum}_votes`]: 1 } },
-    //     { new: true }
-    //   );
-    //   return vote;
-    // },
-  },
+      const token = signToken(user);
+      return { token, user };
+    },
+    createFlowTalk: async (parent, args) => {
+      const flowTalkData = await flowTalk.create(args);
+      return flowTalkData;
+    },
+
+    createdailyInfo: async (parent, args) => {
+      const dailyInfoData = await dailyInfo.create(args);
+      return dailyInfoData;
+    },
+    removeThought: async (parent, { thoughtId }, context) => {
+      if (context.user) {
+        const thought = await Thought.findOneAndDelete({
+          _id: thoughtId,
+          thoughtAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { thoughts: thought._id } }
+        );
+
+        return thought;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeComment: async (parent, { thoughtId, commentId }, context) => {
+      if (context.user) {
+        return Thought.findOneAndUpdate(
+          { _id: thoughtId },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                commentAuthor: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+  }
 };
 
 module.exports = resolvers;

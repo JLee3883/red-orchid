@@ -3,38 +3,38 @@ const dateFormat = require("../utils/dateFormat");
 
 const dailyInfoSchema = new Schema({
   date: {
-    type: Date,
+    type: String,
     default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
     required: true,
   },
   flow: {
     type: Number,
     min: 0,
     max: 5,
-    required: false,
+    required: true,
   },
   pain: {
     type: Number,
     min: 0,
     max: 5,
-    required: false,
+    required: true,
   },
   mood: {
     type: String,
-    required: false,
+    required: true,
   },
   cravings: {
-    type: [],
-    required: false,
+    type: String,
+    required: true,
   },
   notes: {
     type: String,
     minlength: 1,
     maxlength: 280,
+    required: true,
   },
 });
 
-const Tech = model("Tech", techSchema);
+const dailyInfo = model("dailyInfo", dailyInfoSchema);
 
-module.exports = Tech;
+module.exports = dailyInfo;
