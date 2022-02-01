@@ -8,10 +8,10 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home';
-import './Style.css';
-import logo from './logo.svg';
-import Calendar from 'react-calendar';
+import Signup from './pages/Signup';
 import Dashboard from './pages/dashboard';
+import 'react-modern-calendar-datepicker/lib/DatePicker.css';
+import DatePicker from 'react-modern-calendar-datepicker';
 
 
 
@@ -44,7 +44,8 @@ function App() {
 
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/dashboard" element={<Dashboard/>} />
-            <Route exact path="/calendar" element={<Calendar/>} />
+            <Route exact path="/signup" element={<Signup/>} />
+            <Route exact path="/calendar" element={<DatePicker/>} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
 
           </Routes>

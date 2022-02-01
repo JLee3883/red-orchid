@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Card, ModalBody, Nav, Tab } from 'react-bootstrap';
-import Login from './Login';
-import Register from './Register';
+import Login from '../components/LoginSignin/Login';
+import Register from '../components/LoginSignin/Register';
 
-
-const Home = () => {
+const SignUp = () => {
   const [setShowCard] = useState(false);
 
 
   return (
     <>
-<ModalBody className='page'>
+
       <Card>
         <Tab.Container defaultActiveKey='login'>
           <Card.Header closeButton>
@@ -37,9 +36,9 @@ const Home = () => {
           </Card.Body>
         </Tab.Container>
       </Card>
-      </ModalBody>
+     
     </>
   );
 };
 
-export default Home;
+export default SignUp;

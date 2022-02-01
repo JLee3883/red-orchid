@@ -1,15 +1,15 @@
 import React, { useRef, useEffect } from 'react';
 
-import { getSlideDate, handleSlideAnimationEnd, animateContent } from '../shared/sliderHelpers';
+import { getSlideDate, handleSlideAnimationEnd, animateContent } from '../../shared/sliderHelpers';
 import {
   deepCloneObject,
   isSameDay,
   createUniqueRange,
   getValueType,
-} from '../shared/generalUtils';
-import { TYPE_SINGLE_DATE, TYPE_RANGE, TYPE_MUTLI_DATE } from '../shared/constants';
-import handleKeyboardNavigation from '../shared/keyboardNavigation';
-import { useLocaleUtils, useLocaleLanguage } from '../shared/hooks';
+} from '../../shared/generalUtils';
+import { TYPE_SINGLE_DATE, TYPE_RANGE, TYPE_MUTLI_DATE } from '../../shared/contants';
+import handleKeyboardNavigation from '../../shared/keyboardNavigation';
+import { useLocaleUtils, useLocaleLanguage } from '../../shared/hooks';
 
 const DaysList = ({
   activeDate,

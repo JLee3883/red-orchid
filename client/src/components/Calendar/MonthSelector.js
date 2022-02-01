@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 
-import { isSameDay } from '../shared/generalUtils';
-import handleKeyboardNavigation from '../shared/keyboardNavigation';
-import { useLocaleUtils, useLocaleLanguage } from '../shared/hooks';
+import { isSameDay } from '../../shared/generalUtils';
+import handleKeyboardNavigation from '../../shared/keyboardNavigation';
+import { useLocaleUtils, useLocaleLanguage } from '../../shared/hooks';
 
 const MonthSelector = ({ activeDate, maximumDate, minimumDate, onMonthSelect, isOpen, locale }) => {
   const monthSelector = useRef(null);

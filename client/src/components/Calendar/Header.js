@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
-import { isSameDay } from '../shared/generalUtils';
-import { getSlideDate, animateContent, handleSlideAnimationEnd } from '../shared/sliderHelpers';
-import { useLocaleUtils, useLocaleLanguage } from '../shared/hooks';
+import { isSameDay } from '../../shared/generalUtils';
+import { getSlideDate, animateContent, handleSlideAnimationEnd } from '../../shared/sliderHelpers';
+import { useLocaleUtils, useLocaleLanguage } from '../../shared/hooks';
 
 const Header = ({
   maximumDate,
