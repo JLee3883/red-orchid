@@ -37,14 +37,14 @@ const resolvers = {
 
     removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
-        const flowTalk = await Thought.findOneAndDelete({
-          _id: thoughtId,
+        const flowTalk = await flowTalk.findOneAndDelete({
+          _id: flowTalkId,
           flowTalkAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { flowTalk: flowTalk._id } }
         );
 
         return thought;
