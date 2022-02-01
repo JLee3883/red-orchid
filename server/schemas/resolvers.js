@@ -55,10 +55,10 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
   /*deleting comments */
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
+    removeComment: async (parent, { flowTalkId, commentId }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return commentId.findOneAndUpdate(
+          { _id: commentId },
           {
             $pull: {
               comments: {
