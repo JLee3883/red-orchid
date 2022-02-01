@@ -35,11 +35,11 @@ const resolvers = {
       return dailyInfoData;
     },
 
-    removeThought: async (parent, { thoughtId }, context) => {
+    removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
+        const flowTalk = await Thought.findOneAndDelete({
           _id: thoughtId,
-          thoughtAuthor: context.user.username,
+          flowTalkAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
