@@ -29,12 +29,15 @@ const resolvers = {
       const flowTalkData = await flowTalk.create(args);
       return flowTalkData;
     },
-
+    createComment: async (parent, args) => {
+      const commentData = await comment.create(args);
+      return commentData;
+    },
     createdailyInfo: async (parent, args) => {
       const dailyInfoData = await dailyInfo.create(args);
       return dailyInfoData;
     },
-
+/*remove flowTalk code*/
     removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
         const flowTalk = await flowTalk.findOneAndDelete({
@@ -47,10 +50,11 @@ const resolvers = {
           { $pull: { flowTalk: flowTalk._id } }
         );
 
-        return thought;
+        return flowTalk;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+  /*deleting comments */
     removeComment: async (parent, { thoughtId, commentId }, context) => {
       if (context.user) {
         return Thought.findOneAndUpdate(
