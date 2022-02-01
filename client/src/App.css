@@ -1,5 +1,9 @@
 /* this is for global styling. will be applied to every single page*/
-
+.body {
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../public/images/Untitled.jpg");
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -16,4 +20,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
