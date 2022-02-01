@@ -29,31 +29,36 @@ const resolvers = {
       const flowTalkData = await flowTalk.create(args);
       return flowTalkData;
     },
-
+    createComment: async (parent, args) => {
+      const commentData = await comment.create(args);
+      return commentData;
+    },
     createdailyInfo: async (parent, args) => {
       const dailyInfoData = await dailyInfo.create(args);
       return dailyInfoData;
     },
-    removeThought: async (parent, { thoughtId }, context) => {
+/*remove flowTalk code*/
+    removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
+        const flowTalk = await flowTalk.findOneAndDelete({
+          _id: flowTalkId,
+          flowTalkAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { flowTalk: flowTalk._id } }
         );
 
-        return thought;
+        return flowTalk;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
+  /*deleting comments */
+    removeComment: async (parent, { flowTalkId, commentId }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return commentId.findOneAndUpdate(
+          { _id: commentId },
           {
             $pull: {
               comments: {
