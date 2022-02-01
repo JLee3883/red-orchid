@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_TECH } from '../utils/queries';
-import { CREATE_MATCHUP } from '../utils/mutations';
+import { QUERY_USER, QUERY_COMMENTS } from '../utils/queries';
+import { CREATE_FLOWTALK, ADD_COMMENT } from '../utils/mutations';
 
 const Matchup = () => {
   const { loading, data } = useQuery(QUERY_TECH);

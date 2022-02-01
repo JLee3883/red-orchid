@@ -1,10 +1,9 @@
-.App {
-  text-align: center;
-}
+/* this is for global styling. will be applied to every single page*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../public/images/Untitled.jpg");
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,17 +21,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

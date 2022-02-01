@@ -1,13 +1,23 @@
 [
   {
-    "username": "Taylor",
-    "email": "Taylor@email.com",
-    "password": "password1"
+    "username": "jamieatsrice",
+    "email": "jamie.rose.528@gmail.com",
+    "password": "jamiespassword"
   },
   {
-    "username": "Sarah",
-    "email": "sarah@email.com",
-    "password": "password2"
+    "username": "annielnguyen",
+    "email": "anguyen.aln@gmail.com",
+    "password": "anniespassword"
+  },
+  {
+    "username": "jlee3883",
+    "email": "thishereisjenn@gmail.com",
+    "password": "jennspassword"
+  },
+  {
+    "username": "elmiratash",
+    "email": "elmira.tashvighi@gmail.com",
+    "password": "elimraspassword"
   }
-  
 ]
+
