@@ -34,7 +34,6 @@ const resolvers = {
       const dailyInfoData = await dailyInfo.create(args);
       return dailyInfoData;
     },
-    
     removeThought: async (parent, { thoughtId }, context) => {
       if (context.user) {
         const thought = await Thought.findOneAndDelete({
