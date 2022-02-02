@@ -28,6 +28,11 @@ type flowTalk {
     createdAt: String
 }
 
+type comment {
+    commentText: String
+    commentAuthor: String
+}
+
 type Query {
     flowTalks: [flowTalk]
 }
@@ -37,7 +42,13 @@ type Mutation {
 
     createdailyInfo(date: String!, flow: Int!, pain: Int!, mood: String!, cravings: String!, notes: String!) : dailyInfo
 
+    createComment(commentText: String!, commentAuthor: String!) : comment
+
     login(email: String!, password: String!): Auth
+
+    removeflowTalk(flowTalkId: ID!): flowTalk
+
+    removeComment(flowtalkId: ID!, commentId: ID!): flowTalk
 }
 `;
 
