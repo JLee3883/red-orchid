@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { Calendar } from "react-modern-calendar-datepicker";
-import { Card } from "react-bootstrap";
+
 
 const Calendar = () => {
   const defaultValue = {
@@ -13,15 +13,13 @@ const Calendar = () => {
   const [selectedDay, setSelectedDay] = useState(defaultValue);
   return (
     <>
-    <div className="body"> 
-    <Card.Body>
+    
     <Calendar
       value={selectedDay}
       onChange={setSelectedDay}
       shouldHighlightWeekends
     />
-    </Card.Body>
-    </div>
+
     </>
   );
 };
