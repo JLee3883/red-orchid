@@ -1,11 +1,11 @@
 import React from "react";
 import "./NavBar.css";
 import { Navbar, Nav } from "react-bootstrap";
-import Logo from "../../orchid-single.png"
+import Logo from "../../orchid-single.png";
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
       <Navbar.Brand href="#home">
         <img
           alt=""
