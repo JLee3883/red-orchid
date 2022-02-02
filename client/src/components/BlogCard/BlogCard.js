@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 const BlogCard = () => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem", margin:"0 auto" }}>
       <Card.Body>
         <Card.Title className="cardTitle">Card Title</Card.Title>
         <Card.Subtitle href="#" className="mb-2 text-muted cardAuthor">
