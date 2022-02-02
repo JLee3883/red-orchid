@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Card, ModalBody, Nav, Tab } from 'react-bootstrap';
+import { Card, Nav, Tab } from 'react-bootstrap';
 import Login from '../components/LoginSignin/Login';
 import Register from '../components/LoginSignin/Register';
+
 
 const SignUp = () => {
   const [setShowCard] = useState(false);
@@ -9,8 +10,8 @@ const SignUp = () => {
 
   return (
     <>
-
-      <Card>
+<div className='body'>
+     <Card>
         <Tab.Container defaultActiveKey='login'>
           <Card.Header closeButton>
             <Card.Title id='signup-Card'>
@@ -36,7 +37,7 @@ const SignUp = () => {
           </Card.Body>
         </Tab.Container>
       </Card>
-     
+      </div>
     </>
   );
 };
