@@ -1,0 +1,12 @@
+
+.card {
+    width: 25rem;
+    height: 25rem;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.425);
+
+   
+}
+
