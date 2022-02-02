@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import auth from '../utils/auth';
-import '../'
+import { LOGIN_USER } from '../../utils/mutations';
+import auth from '../../utils/auth';
+
 
 
 
@@ -95,7 +95,7 @@ const Login = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
-        <Button
+        <Button className='bt-lg'
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
