@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { Card, ModalBody, Nav, Tab } from 'react-bootstrap';
-import Login from './Login';
-import Register from './Register';
+import { Card, Nav, Tab } from 'react-bootstrap';
+import Login from '../components/LoginSignin/Login';
+import Register from '../components/LoginSignin/Register';
 
 
-const Home = () => {
+const SignUp = () => {
   const [setShowCard] = useState(false);
 
 
   return (
     <>
-<ModalBody className='page'>
-      <Card>
+<div className='body'>
+     <Card>
         <Tab.Container defaultActiveKey='login'>
           <Card.Header closeButton>
             <Card.Title id='signup-Card'>
@@ -37,9 +37,9 @@ const Home = () => {
           </Card.Body>
         </Tab.Container>
       </Card>
-      </ModalBody>
+      </div>
     </>
   );
 };
 
-export default Home;
+export default SignUp;
