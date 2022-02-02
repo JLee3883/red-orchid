@@ -4,8 +4,8 @@ import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_COMMENTS } from '../utils/queries';
 import { CREATE_FLOWTALK, ADD_COMMENT } from '../utils/mutations';
 
-const Matchup = () => {
-  const { loading, data } = useQuery(QUERY_TECH);
+const comments = () => {
+  const { loading, data } = useQuery(QUERY_COMMENTS);
 
   const techList = data?.tech || [];
 
@@ -72,7 +72,7 @@ const Matchup = () => {
               })}
             </select>
             <button className="btn btn-danger" type="submit">
-              Create Matchup!
+              Submit!
             </button>
           </form>
         )}
