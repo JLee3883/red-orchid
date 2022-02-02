@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import FormField from "../Forms/FormField";
 
 const BlogCard = () => {
   return (
@@ -14,8 +15,11 @@ const BlogCard = () => {
           bulk of the card's content.
         </Card.Text>
       </Card.Body>
+      {/* //import the comment input component here and make sure that they are logged in*/}
+      <FormField isMultiLine label="Comment"/>
     </Card>
   );
 };
+
 
 export default BlogCard;
