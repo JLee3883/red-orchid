@@ -1,7 +1,9 @@
 import React from "react";
+
 import { Card, Button } from "react-bootstrap";
 import FormField from "../Forms/FormField";
 import Comment from "../Comment/Comment";
+
 
 const BlogCard = () => {
   return (
@@ -17,8 +19,11 @@ const BlogCard = () => {
         </Card.Text>
         {/* <Comment /> */}
       </Card.Body>
+      {/* //import the comment input component here and make sure that they are logged in*/}
+      <FormField isMultiLine label="Comment"/>
     </Card>
   );
 };
+
 
 export default BlogCard;

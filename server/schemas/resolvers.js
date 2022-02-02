@@ -10,6 +10,7 @@ const resolvers = {
   },
   Mutation: {
     login: async (parent, { email, password }) => {
+      console.log("you made it")
       const user = await User.findOne({ email });
 
       if (!user) {
