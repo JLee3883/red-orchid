@@ -12,8 +12,10 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/dashboard';
 import { Calendar } from 'react-modern-calendar-datepicker';
 import './Style/SignUp.css';
-import './Style/Calendar.css';
+import '../src/components/Calendar/Calendar.css';
 import './App.css';
+import '../src/components/Tracker/Tracker.css'
+import Tracker from './components/Tracker/Tracker';
 
 
 const httpLink = createHttpLink({
@@ -43,10 +45,11 @@ function App() {
       <Router>
       <Routes>
 
-            <Route exact path="/" element={<Home/>} />
+            <Route  exact path="/" element={<Home/>} />
             <Route exact path="/dashboard" element={<Dashboard/>} />
             <Route exact path="/signup" element={<Signup/>} />
             <Route exact path="/calendar" element={<Calendar/>} />
+            <Route exact path="/tracker" element={<Tracker/>} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
 
           </Routes>

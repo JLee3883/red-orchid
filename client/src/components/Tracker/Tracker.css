@@ -1,0 +1,14 @@
+.bt-trc {
+    color: black;
+    background-color: blueviolet;
+    border-color: blueviolet;
+    width: 100px;
+    margin: 30px;
+}
+.bt-trc:active {
+    color: brown;
+    background-color: chocolate;
+    
+    
+}
+
