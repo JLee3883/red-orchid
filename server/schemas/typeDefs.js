@@ -29,6 +29,7 @@ type flowTalk {
 }
 
 type comment {
+    _id: ID
     commentText: String
     commentAuthor: String
 }

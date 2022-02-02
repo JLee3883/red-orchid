@@ -2,7 +2,7 @@
 .body {
   background-size: cover;
   height: 100vh;
-  background-image: url("../public/images/Untitled.jpg");
+  background-image: url("./images/Untitled.jpg");
   margin: 0;
   padding: 0;
 }

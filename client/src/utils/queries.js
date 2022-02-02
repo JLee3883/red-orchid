@@ -14,6 +14,16 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_FLOWTALK = gql`
+  query FlowTalk {
+    _id
+    flowTalkTitle
+    flowTalkText
+    flowTalkAuthor
+    createdAt
+  }
+`;
 export const QUERY_COMMENTS = gql`
   query getComments {
     comments {
