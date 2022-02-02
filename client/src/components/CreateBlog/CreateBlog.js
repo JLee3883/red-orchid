@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import FormField from "../Forms/FormField";
 
 const CreateBlog = () => {
   const [show, setShow] = useState(false);
@@ -9,7 +10,7 @@ const CreateBlog = () => {
 
   return (
     <>
-      <div style={{ margin: "0 auto", width: "18rem" }}>
+      <div style={{ margin: "10px auto", width: "18rem" }}>
         <Button
           onClick={handleShow}
           style={{ width: "18rem", backgroundColor: "red", borderColor: "red" }}
@@ -21,24 +22,18 @@ const CreateBlog = () => {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
-            <input
-              className="flow-talk-title"
-              placeholder="Flow Talk Title"
-            ></input>
+            <FormField label="Flow Talk Title" />
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input
-            className="flow-talk-entry"
-            placeholder="Flow Talk Entry"
-          ></input>
+          <FormField label="Flow Talk Entry" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Post
           </Button>
         </Modal.Footer>
       </Modal>
