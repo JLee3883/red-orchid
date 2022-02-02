@@ -20,7 +20,7 @@ const BlogCard = () => {
         {/* <Comment /> */}
       </Card.Body>
       {/* //import the comment input component here and make sure that they are logged in*/}
-      <FormField isMultiLine label="Comment"/>
+      {/* <FormField isMultiLine label="Comment"/> */}
     </Card>
   );
 };
