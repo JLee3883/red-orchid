@@ -16,6 +16,7 @@ import '../src/components/Calendar/Calendar.css';
 import './App.css';
 import '../src/components/Tracker/Tracker.css'
 import Tracker from './components/Tracker/Tracker';
+import BaseComponent from 'bootstrap/js/dist/base-component';
 
 
 const httpLink = createHttpLink({
@@ -43,9 +44,9 @@ function App() {
 
     <ApolloProvider client={client} >
       <Router>
-      <Routes>
+      <Routes >
 
-            <Route  exact path="/" element={<Home/>} />
+            <Route exact path="/" element={<Home/>} />
             <Route exact path="/dashboard" element={<Dashboard/>} />
             <Route exact path="/signup" element={<Signup/>} />
             <Route exact path="/calendar" element={<Calendar/>} />
@@ -55,6 +56,7 @@ function App() {
           </Routes>
       </Router>
     </ApolloProvider>
+
   );
 }
 
