@@ -8,7 +8,7 @@ import Dashboard from './pages/dashboard';
 function App() {
   return (<div className='body'>
     <Home/>
-    </div>
+    </div>)
 }
 
 export default App;
