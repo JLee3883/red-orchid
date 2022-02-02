@@ -1,9 +1,10 @@
 /* this is for global styling. will be applied to every single page*/
-
 .body {
   background-size: cover;
   height: 100vh;
   background-image: url("../public/images/Untitled.jpg");
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
