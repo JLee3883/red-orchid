@@ -10,7 +10,6 @@ import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home';
 import './App.css';
 import logo from './logo.svg';
-import Calendar from 'react-calendar';
 import Signup from './pages/Signup';
 import Dashboard from './pages/dashboard';
 import { Calendar } from 'react-modern-calendar-datepicker';
