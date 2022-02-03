@@ -12,12 +12,11 @@ import Home from "./pages/Home";
 import Signup from "./pages/LogIn/Signup";
 import Dashboard from "./pages/dashboard";
 import { Calendar } from "react-modern-calendar-datepicker";
-import "./Style/SignUp.css";
 import "../src/components/Calendar/Calendar.css";
 import "./App.css";
 import "../src/components/Tracker/Tracker.css";
 import Tracker from "./components/Tracker/Tracker";
-import Profile from "../src/pages/Profile/Profile"
+import Profile from "./pages/Profile/Profile/Profile";
 
 
 const httpLink = createHttpLink({
