@@ -10,7 +10,7 @@ const SignUp = () => {
 
   return (
     <>
-      <body className="body">
+      <body>
         <NavBar />
         <Card style={{ margin: "45px auto" }}>
           <Tab.Container defaultActiveKey="login">
