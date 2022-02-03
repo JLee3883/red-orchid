@@ -15,8 +15,8 @@ const Tracker = () => {
         <FormField label="Pain Level" />
         <FormField label="Cravings" />
         <FormField label="Mood" />
-        <FormField inMultiLine label="Notes" />
-      <Button>
+        <FormField isMultiLine label="Notes"></FormField>
+      <Button className="bt-pro">
           Submit
       </Button>
         </Card.Text>
