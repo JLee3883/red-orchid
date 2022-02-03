@@ -11,7 +11,6 @@ import Home from "./pages/Home";
 import Signup from "./pages/LogIn/Signup";
 import Dashboard from "./pages/dashboard";
 import { Calendar } from "react-modern-calendar-datepicker";
-import "./Style/SignUp.css";
 import "../src/components/Calendar/Calendar.css";
 import "./App.css";
 import "../src/components/Tracker/Tracker.css";

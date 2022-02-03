@@ -1,8 +1,21 @@
+.card {
+   width: 25rem;
+   height: 30rem;
+   box-sizing: border-box;
+   border: 1px solid gray;
+   border-radius: 10px;
+   box-shadow: 5px 5px rgba(128, 128, 128, 0.425);
+   margin: 20px;
+  
+}
 
+.cal-new {
+   margin-left: 200px;
+   margin-bottom: -300px;
 
+}
 
-
-.C-2 {
-   margin-left: 45rem;
-   margin-top: -28rem;
+.trc-new {
+   margin-left: 700px;
+   margin-top: -430px;
 }
