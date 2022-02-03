@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
 }
-.body {
-  height: 100vh;
+body {
   background-size: cover;
   background-image: url("./images/Untitled.jpg");
   background-attachment: fixed;
   background-repeat: repeat-y;
-  background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
@@ -31,4 +29,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
