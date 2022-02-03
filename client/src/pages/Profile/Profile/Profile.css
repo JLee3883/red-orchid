@@ -1,31 +1,33 @@
 
 .card {
    width: 25rem;
-   height: 30rem;
+   height: 25rem;
    box-sizing: border-box;
    border: 1px solid white;
    background-color: white;
    border-radius: 10px;
-   box-shadow: 5px 5px rgba(128, 128, 128, 0.425);
+   box-shadow: 2px 2px rgba(128, 128, 128, 0.425);
    margin: 20px;
   
 }
 
 .cal-new {
+   
    margin-left: 250px;
-   margin-top: 50px;
+   margin-top: 100px;
  
 }
 
 .trc-new {
-<<<<<<< HEAD
-   margin-left: 700px;
-   margin-top: -500px;
-=======
-
-   margin-left: 750px;
-   margin-top: -500px;
    
->>>>>>> cbb248798fda5c7090041633e9f5c8d4c27e3ec4
+   margin-left: 700px;
+   margin-top: -420px;
+   
 
+}
+
+.cal-pro {
+   display: block;
+   align-items: center;
+   align-content: center;
 }

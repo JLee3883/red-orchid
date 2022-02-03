@@ -7,7 +7,7 @@ import "../Tracker/Tracker.css";
 const Tracker = () => {
   return (
       <>
-      <div className="body">
+      
     <Card className="tracker-card" style={{ margin: "0 auto" }}>
       <Card.Body>
         <Card.Title className="cardTitle"></Card.Title>
@@ -24,7 +24,7 @@ const Tracker = () => {
         </Card.Text>
       </Card.Body>
     </Card>
-    </div>
+    
     </>
   );
 };
