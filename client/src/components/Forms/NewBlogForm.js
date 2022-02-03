@@ -5,19 +5,19 @@ import { useMutation } from '@apollo/client';
 import { CREATE_FLOWTALK } from '../../utils/mutations';
 import { QUERY_FLOWTALK, QUERY_ME } from '../../utils/queries';
 
-const ThoughtForm = () => {
-    const [thoughtText, setThoughtText] = useState('');
+const FlowTalkForm = () => {
+    const [FlowTalkText, setFlowTalkText] = useState('');
   
     const [characterCount, setCharacterCount] = useState(0);
   
-    const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-      update(cache, { data: { addThought } }) {
+    const [addFlowTalk, { error }] = useMutation(CREATE_FLOWTALK, {
+      update(cache, { data: { addFlowTalk } }) {
         try {
-          const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+          const { FlowTalk } = cache.readQuery({ query: CREATE_FLOWTALK });
   
           cache.writeQuery({
-            query: QUERY_THOUGHTS,
-            data: { thoughts: [addThought, ...thoughts] },
+            query: CREATE_FLOWTALK,
+            data: { FlowTalk: [addFlowTalk, ...FlowTalk] },
           });
         } catch (e) {
           console.error(e);
@@ -27,7 +27,7 @@ const ThoughtForm = () => {
         const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
           query: QUERY_ME,
-          data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+          data: { me: { ...me, FlowTalk: [...me.FlowTalk, addFlowTalk] } },
         });
       },
     });
@@ -36,14 +36,14 @@ const ThoughtForm = () => {
       event.preventDefault();
   
       try {
-        const { data } = await addThought({
+        const { data } = await addFlowTalk({
           variables: {
-            thoughtText,
-            thoughtAuthor: Auth.getProfile().data.username,
+            FlowTalkText,
+            FlowTalktAuthor: Auth.getProfile().data.username,
           },
         });
   
-        setThoughtText('');
+        setFlowTalkText('');
       } catch (err) {
         console.error(err);
       }
@@ -52,8 +52,8 @@ const ThoughtForm = () => {
     const handleChange = (event) => {
       const { name, value } = event.target;
   
-      if (name === 'thoughtText' && value.length <= 280) {
-        setThoughtText(value);
+      if (name === 'FlowTalkText' && value.length <= 280) {
+        setFlowTalkText(value);
         setCharacterCount(value.length);
       }
     };
@@ -77,9 +77,9 @@ const ThoughtForm = () => {
             >
               <div className="col-12 col-lg-9">
                 <textarea
-                  name="thoughtText"
+                  name="FlowTalkText"
                   placeholder="Here's a new thought..."
-                  value={thoughtText}
+                  value={FlowTalkText}
                   className="form-input w-100"
                   style={{ lineHeight: '1.5', resize: 'vertical' }}
                   onChange={handleChange}
@@ -106,4 +106,6 @@ const ThoughtForm = () => {
         )}
       </div>
     );
-  };
+};
+
+export default FlowTalkForm;
