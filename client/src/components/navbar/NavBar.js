@@ -5,8 +5,8 @@ import Logo from "../../orchid-single.png";
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" variant="light">
-      <Navbar.Brand href="#home">
+    <Navbar bg="light" variant="light" sticky="top">
+      <Navbar.Brand href="/signup">
         <img
           alt=""
           src={Logo}
@@ -16,8 +16,8 @@ const NavBar = () => {
         />{" "}
         Red Orchid
       </Navbar.Brand>
-      <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
+      <Nav className="justify-content-end">
+        <Nav.Link href="/dashboard">Home</Nav.Link>
         <Nav.Link href="#profile">My Profile</Nav.Link>
       </Nav>
     </Navbar>

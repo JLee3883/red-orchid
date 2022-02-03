@@ -47,6 +47,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/calendar" element={<Calendar />} />
             <Route exact path="/tracker" element={<Tracker />} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
