@@ -1,26 +1,26 @@
-const { flowTalk, dailyInfo, User} = require('../models');
-const { signToken } = require('../utils/auth');
-const { AuthenticationError} = require("apollo-server-express");
+const { flowTalk, dailyInfo, User } = require("../models");
+const { signToken } = require("../utils/auth");
+const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
   Query: {
-   flowTalks : async () => {
-     return await flowTalk.find()
-   } 
+    flowTalks: async () => {
+      return await flowTalk.find();
+    },
   },
   Mutation: {
     login: async (parent, { email, password }) => {
-      console.log("you made it")
+      console.log("you made it");
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No profile with this email found!');
+        throw new AuthenticationError("No profile with this email found!");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new AuthenticationError("Incorrect password!");
       }
 
       const token = signToken(user);
@@ -28,6 +28,7 @@ const resolvers = {
     },
     createFlowTalk: async (parent, args) => {
       const flowTalkData = await flowTalk.create(args);
+      console.log(flowTalkData);
       return flowTalkData;
     },
     createComment: async (parent, args) => {
@@ -38,7 +39,7 @@ const resolvers = {
       const dailyInfoData = await dailyInfo.create(args);
       return dailyInfoData;
     },
-/*remove flowTalk code*/
+    /*remove flowTalk code*/
     removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
         const flowTalk = await flowTalk.findOneAndDelete({
@@ -53,9 +54,9 @@ const resolvers = {
 
         return flowTalk;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
-  /*deleting comments */
+    /*deleting comments */
     removeComment: async (parent, { flowTalkId, commentId }, context) => {
       if (context.user) {
         return commentId.findOneAndUpdate(
@@ -71,9 +72,9 @@ const resolvers = {
           { new: true }
         );
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
-  }
+  },
 };
 
 module.exports = resolvers;

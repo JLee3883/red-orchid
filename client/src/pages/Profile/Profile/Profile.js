@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Calendar } from 'react-modern-calendar-datepicker';
@@ -19,8 +20,11 @@ const Profile = () => {
       <Card className='trc-new'>
         <Tracker/>
       </Card>  
+
     </>
   );
 };
 
+
 export default Profile;
+
