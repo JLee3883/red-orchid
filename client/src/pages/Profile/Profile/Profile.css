@@ -1,5 +1,5 @@
-
 .card {
+
    width: 25rem;
    height: 25rem;
    box-sizing: border-box;
@@ -20,4 +20,5 @@
 
    margin-left: 700px;
    margin-top: -420px;  
+
 }
