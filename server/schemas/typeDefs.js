@@ -39,7 +39,7 @@ type Query {
 }
 
 type Mutation {
-    createFlowTalk(flowTalkTitle: String!, flowTalkText: String!, flowTalkAuthor: String!) : flowTalk
+    createFlowTalk(flowTalkTitle: String!, flowTalkText: String!) : flowTalk
 
     createdailyInfo(date: String!, flow: Int!, pain: Int!, mood: String!, cravings: String!, notes: String!) : dailyInfo
 
