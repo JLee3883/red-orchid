@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { QUERY_FLOWTALK } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
 import { Card, Button } from "react-bootstrap";
@@ -7,13 +7,18 @@ import Comment from "../Comment/Comment";
 
 const BlogCard = () => {
   const { loading, data } = useQuery(QUERY_FLOWTALK);
-  const flowTalkData = data?.flowTalks || [];
+  let flowTalkData = data?.flowTalks || [];
+  
+  // useEffect(()=>{
+  //   // flowTalkData = flowTalkData.reverse()
+  // },[flowTalkData])
+
   console.log(flowTalkData);
   return (
     <>
       {loading
         ? "loading.."
-        : flowTalkData.map((flowTalk) => {
+        : [...flowTalkData].reverse().map((flowTalk) => {
             return (
               <Card style={{ width: "30rem", margin: "40px auto" }}>
                 <Card.Body>
