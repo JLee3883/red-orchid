@@ -1,20 +1,24 @@
-const db = require('../config/connection');
-const { User } = require('../models');
+const db = require("../config/connection");
+const { User, flowTalk } = require("../models");
 
-const userData = require('./userSeeds.json');
+const userData = require("./userSeeds.json");
+const flowTalkData = require("./flowTalk.json");
 
-db.once('open', async () => {
+db.once("open", async () => {
   try {
     await User.deleteMany({});
-  
-    // const users = 
+
+    // const users =
     await User.create(userData);
-    
+    await flowTalk.deleteMany({});
+
+    // const users =
+    await flowTalk.insertMany(flowTalkData);
   } catch (error) {
-    console.error(error)
-    process.exit(1)
+    console.error(error);
+    process.exit(1);
   }
 
-  console.log('Users seeded!');
+  console.log("Users seeded!");
   process.exit(0);
 });
