@@ -6,9 +6,9 @@ const Tracker = () => {
   return (
       <>
       <div className="body">
-    <Card className="tracker-card" style={{ width: "25rem", height: "35rem", margin: "0 auto" }}>
+    <Card className="tracker-card" style={{ margin: "0 auto", height: "32rem" }}>
       <Card.Body>
-        <Card.Title className="cardTitle">tracker</Card.Title>
+        <Card.Title className="cardTitle"></Card.Title>
         <Card.Text className="textCard">
         <FormField label="Date"/>
         <FormField label="The Flow" />
@@ -16,11 +16,11 @@ const Tracker = () => {
         <FormField label="Cravings" />
         <FormField label="Mood" />
         <FormField inMultiLine label="Notes" />
-        </Card.Text>
-      </Card.Body>
       <Button>
           Submit
       </Button>
+        </Card.Text>
+      </Card.Body>
     </Card>
     </div>
     </>

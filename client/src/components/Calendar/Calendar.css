@@ -20,7 +20,7 @@
   }
   
   .DatePicker__input::placeholder {
-    color: #979797;
+    color: #928e8e;
   }
   
   .DatePicker__calendarContainer.-top + .DatePicker__calendarArrow {
@@ -83,10 +83,10 @@
     padding-top: 1.2em;
     display: flex;
     flex-direction: column;
-    width: 33em;
+    width: 46em;
+    height: 45em;
     z-index: 10;
-    max-width: 90vw;
-    min-height: 36.7em;
+    
   }
   
   .DatePicker .Calendar,

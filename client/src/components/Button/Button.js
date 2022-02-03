@@ -2,15 +2,13 @@ import React from 'react';
 
 
 
-const Button = ({isSubmit, }) => {
+const Button = ({ isSubmit }) => {
+    
     return (
-        <div>
-            <Button 
-            onClick={onClick} type={type}>
-
-            </Button>
-           
-        </div>
+        
+        <>
+        {!show && <Button onClick={() => isSubmit(true)}>Submit</Button>}
+        </>
 
     );
 };

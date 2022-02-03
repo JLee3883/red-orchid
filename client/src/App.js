@@ -17,6 +17,7 @@ import "../src/components/Calendar/Calendar.css";
 import "./App.css";
 import "../src/components/Tracker/Tracker.css";
 import Tracker from "./components/Tracker/Tracker";
+import Profile from "../src/pages/Profile/Profile"
 
 
 const httpLink = createHttpLink({
