@@ -24,21 +24,15 @@ export const ADD_USER = gql`
 `;
 
 export const CREATE_FLOWTALK = gql`
-  mutation createFlowTalk($flowTalkTitle: String!, $flowTalkText: String!, $flowTalkAuthor: String!) {
-    createMatchup(flowTalkTitle: $flowTalkTitle, flowTalkText: $flowTalkText, flowTalkAuthor: $flowTalkAuthor) {
-      _id
-      flowTalkTitle
-      flowTalkText
-      flowTalkAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
-      }
-    }
+mutation createFlowTalk($flowTalkTitle:String!, $flowTalkText:String!, $flowTalkAuthor:String!){
+  createFlowTalk(flowTalkTitle:$flowTalkTitle, flowTalkText:$flowTalkText, flowTalkAuthor:$flowTalkAuthor){
+    _id
+    flowTalkTitle
+    flowTalkText
+    flowTalkAuthor
+    createdAt
   }
+}
 `;
 
 export const ADD_COMMENT = gql`

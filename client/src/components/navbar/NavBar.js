@@ -18,7 +18,7 @@ const NavBar = () => {
       </Navbar.Brand>
       <Nav className="justify-content-end">
         <Nav.Link href="/dashboard">Home</Nav.Link>
-        <Nav.Link href="#profile">My Profile</Nav.Link>
+        <Nav.Link href="/profile">My Profile</Nav.Link>
       </Nav>
     </Navbar>
   );
