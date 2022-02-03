@@ -39,9 +39,9 @@ const Home = () => {
     <div>
       <NavBar />
       <BlogCard />
-      <FormField change={handleChange} label="Email" />
+      {/* <FormField change={handleChange} label="Email" />
       <FormField change={handleChange} label="Password" />
-      <button onClick={handleFormSubmit}>Submit</button>
+      <button onClick={handleFormSubmit}>Submit</button> */}
     </div>
   );
 };
