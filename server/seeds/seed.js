@@ -13,7 +13,7 @@ db.once("open", async () => {
     await flowTalk.deleteMany({});
 
     // const users =
-    await flowTalk.insertMany(flowTalkData);
+    await flowTalk.create(flowTalkData);
   } catch (error) {
     console.error(error);
     process.exit(1);
