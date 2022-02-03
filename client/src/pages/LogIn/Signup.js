@@ -10,7 +10,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="signupbody">
+      <body className="body">
         <NavBar />
         <Card style={{ margin: "45px auto" }}>
           <Tab.Container defaultActiveKey="login">
@@ -38,7 +38,7 @@ const SignUp = () => {
             </Card.Body>
           </Tab.Container>
         </Card>
-      </div>
+      </body>
     </>
   );
 };

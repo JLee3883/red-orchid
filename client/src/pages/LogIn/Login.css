@@ -1,10 +1,8 @@
-.signupbody {
-  height: 100vh;
+.body {
   background-image: url("../../images/otherbackground.png") !important;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: repeat-y;
-  background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;

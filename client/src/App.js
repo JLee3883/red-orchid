@@ -37,7 +37,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div className="body">
+    <body>
       <ApolloProvider client={client}>
         <Router>
           <Routes>
@@ -51,7 +51,7 @@ function App() {
           </Routes>
         </Router>
       </ApolloProvider>
-    </div>
+    </body>
   );
 }
 
