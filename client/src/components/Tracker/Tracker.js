@@ -1,27 +1,26 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import FormField from "../Forms/FormField";
 
 const Tracker = () => {
   return (
       <>
       <div className="body">
-    <Card className="tracker-card" style={{ width: "25rem", height: "35rem" }}>
+    <Card className="tracker-card" style={{ margin: "0 auto", height: "32rem" }}>
       <Card.Body>
-        <Card.Title className="cardTitle">tracker</Card.Title>
+        <Card.Title className="cardTitle"></Card.Title>
         <Card.Text className="textCard">
-        <FormField label="Date" as={Link} to='/datepicker'/>
+        <FormField label="Date"/>
         <FormField label="The Flow" />
         <FormField label="Pain Level" />
         <FormField label="Cravings" />
         <FormField label="Mood" />
-        <FormField label="Notes" />
-        </Card.Text>
-      </Card.Body>
-      <Button className="bt-trc" type="submit" variant="success">
+        <FormField inMultiLine label="Notes" />
+      <Button>
           Submit
       </Button>
+        </Card.Text>
+      </Card.Body>
     </Card>
     </div>
     </>

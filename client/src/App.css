@@ -1,11 +1,18 @@
 /* this is for global styling. will be applied to every single page*/
+* {
+  margin: 0;
+  padding: 0;
+
+}
 .body {
   background-size: cover;
   height: 100vh;
-  background-image: url("./images/Untitled.jpg");
+  background-image: url("./images/otherbackground.png");
   margin: 0;
   padding: 0;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

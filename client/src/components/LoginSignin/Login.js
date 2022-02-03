@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
-import auth from '../../utils/auth';
+import Auth from '../../utils/auth';
 
 
 
@@ -42,12 +42,11 @@ const Login = () => {
       });
 
       console.log(data);
-      auth.login(data.login.token);
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
 
-    // clear form values
     setUserFormData({
       email: '',
       password: '',
