@@ -6,7 +6,7 @@ const flowTalkSchema = new Schema({
     type: String,
     required: "You need to leave a title!",
     minlength: 1,
-    maxlength: 24,
+    maxlength: 45,
     trim: true,
     unique: true,
     // when it says "unique" does it mean unique in the user, or on the whole database
