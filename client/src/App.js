@@ -16,10 +16,6 @@ import "./App.css";
 import "../src/components/Tracker/Tracker.css";
 import Tracker from "./components/Tracker/Tracker";
 import Profile from "./pages/Profile/Profile/Profile";
-<<<<<<< HEAD
-=======
-
->>>>>>> 547e75b0eab28d10c3220a7d4c692e5df0f8f88a
 
 const httpLink = createHttpLink({
   uri: "/graphql",
