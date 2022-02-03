@@ -1,6 +1,4 @@
-.custom-calendar {
-  box-shadow: 0 1em 3em rgba(156, 136, 255,0.2);
-}
+
 
 .custom-today-day {
   color: #e67e22 !important;
@@ -11,6 +9,7 @@
   visibility: hidden; /* hide small border under the text */
 }
 
-.custom-calendar { 
-  padding: 20px;
+.colorPrimary {
+  background: white;
 }
+

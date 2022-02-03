@@ -20,7 +20,6 @@ const Profile = () => {
       <Card className='trc-new'>
         <Tracker/>
       </Card>  
-
     </>
   );
 };
