@@ -10,7 +10,7 @@ const SignUp = () => {
   return (
     <>
 <div className='body'>
-     <Card>
+     <Card className="log-cd" >
         <Tab.Container defaultActiveKey='login'>
           <Card.Header closeButton>
             <Card.Title id='signup-Card'>

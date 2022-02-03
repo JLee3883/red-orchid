@@ -24,8 +24,8 @@ export const ADD_USER = gql`
 `;
 
 export const CREATE_FLOWTALK = gql`
-mutation createFlowTalk($flowTalkTitle:String!, $flowTalkText:String!, $flowTalkAuthor:String!){
-  createFlowTalk(flowTalkTitle:$flowTalkTitle, flowTalkText:$flowTalkText, flowTalkAuthor:$flowTalkAuthor){
+mutation createFlowTalk($flowTalkTitle:String!, $flowTalkText:String!){
+  createFlowTalk(flowTalkTitle:$flowTalkTitle, flowTalkText:$flowTalkText){
     _id
     flowTalkTitle
     flowTalkText

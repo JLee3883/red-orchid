@@ -26,10 +26,28 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    createFlowTalk: async (parent, args) => {
-      const flowTalkData = await flowTalk.create(args);
-      console.log(flowTalkData);
-      return flowTalkData;
+    // // createFlowTalk: async (parent, args) => {
+    // //   const flowTalkData = await flowTalk.create(args);
+    // //   console.log(flowTalkData);
+    // //   return flowTalkData;
+    // },
+    createFlowTalk: async (parent, { flowTalkText, flowTalkTitle }, context) => {
+      console.log(context.user)
+      if (context.user) {
+        const flowTalkData = await flowTalk.create({
+          flowTalkText,
+          flowTalkTitle,
+          flowTalkAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { flowTalk: flowTalkData._id } }
+        );
+
+        return flowTalkData;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     createComment: async (parent, args) => {
       const commentData = await comment.create(args);
