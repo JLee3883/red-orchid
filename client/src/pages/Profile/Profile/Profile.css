@@ -2,7 +2,8 @@
    width: 25rem;
    height: 30rem;
    box-sizing: border-box;
-   border: 1px solid gray;
+   border: 1px solid white;
+   background-color: white;
    border-radius: 10px;
    box-shadow: 5px 5px rgba(128, 128, 128, 0.425);
    margin: 20px;
@@ -10,12 +11,24 @@
 }
 
 .cal-new {
-   margin-left: 200px;
-   margin-bottom: -300px;
-
+   margin-left: 250px;
+   margin-top: 50px;
+ 
 }
 
 .trc-new {
+<<<<<<< HEAD
    margin-left: 700px;
+<<<<<<< HEAD
    margin-top: -430px;
+=======
+   margin-top: -500px;
+=======
+
+   margin-left: 750px;
+   margin-top: -500px;
+   
+>>>>>>> cbb248798fda5c7090041633e9f5c8d4c27e3ec4
+
+>>>>>>> 547e75b0eab28d10c3220a7d4c692e5df0f8f88a
 }

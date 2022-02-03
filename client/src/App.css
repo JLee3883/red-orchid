@@ -4,8 +4,9 @@
   padding: 0;
 }
 .body {
+  height: 100vh;
   background-size: cover;
-  background-image: url("./images/Untitled.jpg");
+  background-image: url("./images/otherbackground.png");
   background-attachment: fixed;
   background-repeat: repeat-y;
   background-size: cover;

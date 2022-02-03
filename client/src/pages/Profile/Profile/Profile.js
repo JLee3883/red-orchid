@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { Calendar } from 'react-modern-calendar-datepicker';
 import NavBar from '../../../components/navbar/NavBar';
 import Tracker from '../../../components/Tracker/Tracker';
-import "./Profile.css";
+import "../Profile/Profile.css";
 
 
 
@@ -13,7 +13,7 @@ const Profile = () => {
     <>
     <NavBar/>
       <Card className='cal-new'>
-        <Calendar/>
+        <Calendar />
       </Card>
 
       <Card className='trc-new'>
@@ -23,4 +23,6 @@ const Profile = () => {
   );
 };
 
+
 export default Profile;
+

@@ -22,6 +22,7 @@ const CreateBlog = () => {
         ...flow,
       },
     });
+    window.location.reload()
   };
   return (
     <>
