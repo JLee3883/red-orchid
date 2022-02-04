@@ -23,7 +23,7 @@ const NavBar = () => {
       </Navbar.Brand>
       {Auth.loggedIn() ? (
         <Nav className="justify-content-end">
-          <Nav.Link href="/dashboard">Home</Nav.Link>
+          <Nav.Link href="/dashboard">Flow Talk</Nav.Link>
           <Nav.Link href="/profile">My Profile</Nav.Link>
           <Nav.Link onClick={logOut}>LogOut</Nav.Link>
         </Nav>
