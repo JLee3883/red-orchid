@@ -1,5 +1,4 @@
 .card {
-
    width: 21rem;
    height: 23rem;
    box-sizing: border-box;
@@ -8,6 +7,7 @@
    border-radius: 10px;
    margin: 20px;
 }
+
 
 .cal-new {
    background: white;

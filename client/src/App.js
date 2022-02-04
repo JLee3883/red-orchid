@@ -7,7 +7,6 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import Home from "./pages/Home";
 import Signup from "./pages/LogIn/Signup";
 import Dashboard from "./pages/dashboard";
 import { Calendar } from "react-modern-calendar-datepicker";
@@ -41,7 +40,7 @@ function App() {
         <body>
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Signup />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/profile" element={<Profile />} />

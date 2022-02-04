@@ -9,6 +9,11 @@ const resolvers = {
     },
   },
   Mutation: {
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
+    },
     login: async (parent, { email, password }) => {
       console.log("you made it");
       const user = await User.findOne({ email });
@@ -31,8 +36,12 @@ const resolvers = {
     // //   console.log(flowTalkData);
     // //   return flowTalkData;
     // },
-    createFlowTalk: async (parent, { flowTalkText, flowTalkTitle }, context) => {
-      console.log(context.user)
+    createFlowTalk: async (
+      parent,
+      { flowTalkText, flowTalkTitle },
+      context
+    ) => {
+      console.log(context.user);
       if (context.user) {
         const flowTalkData = await flowTalk.create({
           flowTalkText,
@@ -47,7 +56,7 @@ const resolvers = {
 
         return flowTalkData;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
     createComment: async (parent, args) => {
       const commentData = await comment.create(args);
@@ -60,17 +69,17 @@ const resolvers = {
     /*remove flowTalk code*/
     removeflowTalk: async (parent, { flowTalkId }, context) => {
       if (context.user) {
-        const flowTalk = await flowTalk.findOneAndDelete({
+        const flowTalkData = await flowTalk.findOneAndDelete({
           _id: flowTalkId,
           flowTalkAuthor: context.user.username,
         });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { flowTalk: flowTalk._id } }
-        );
+        // await User.findOneAndUpdate(
+        //   { _id: context.user._id },
+        //   { $pull: { flowTalk: flowTalk._id } }
+        // );
 
-        return flowTalk;
+        return flowTalkData;
       }
       throw new AuthenticationError("You need to be logged in!");
     },

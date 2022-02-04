@@ -2,8 +2,13 @@ import React from "react";
 import "./NavBar.css";
 import { Navbar, Nav } from "react-bootstrap";
 import Logo from "../../orchid-single.png";
+import Auth from "../../utils/auth";
 
 const NavBar = () => {
+  const logOut = () => {
+    Auth.logout();
+    window.location.replace("/signup");
+  };
   return (
     <Navbar bg="light" variant="light" sticky="top">
       <Navbar.Brand href="/signup">
@@ -16,10 +21,15 @@ const NavBar = () => {
         />{" "}
         Red Orchid
       </Navbar.Brand>
-      <Nav className="justify-content-end">
-        <Nav.Link href="/dashboard">Home</Nav.Link>
-        <Nav.Link href="/profile">My Profile</Nav.Link>
-      </Nav>
+      {Auth.loggedIn() ? (
+        <Nav className="justify-content-end">
+          <Nav.Link href="/dashboard">Flow Talk</Nav.Link>
+          <Nav.Link href="/profile">My Profile</Nav.Link>
+          <Nav.Link onClick={logOut}>LogOut</Nav.Link>
+        </Nav>
+      ) : (
+        ""
+      )}
     </Navbar>
   );
 };

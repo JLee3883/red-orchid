@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Calendar } from 'react-modern-calendar-datepicker';
 import NavBar from '../../../components/navbar/NavBar';
@@ -9,6 +9,7 @@ import "../Calendar/Calendar.css";
 
 
 const Profile = () => {
+  const [setShowCard] = useState(false);
 
   return (
     <>
