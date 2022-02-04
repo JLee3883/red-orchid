@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Nav, Tab } from 'react-bootstrap';
 import Login from '../components/LoginSignin/Login';
 import Register from '../components/LoginSignin/Register';
-
+import "./FormField.css";
 
 const SignUp = () => {
   const [setShowCard] = useState(false);

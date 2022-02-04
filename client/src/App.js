@@ -37,8 +37,8 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <body>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+        <body>
         <Router>
           <Routes>
             <Route exact path="/" element={<Signup />} />
@@ -50,8 +50,8 @@ function App() {
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
           </Routes>
         </Router>
-      </ApolloProvider>
     </body>
+      </ApolloProvider>
   );
 }
 

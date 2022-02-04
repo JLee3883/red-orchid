@@ -1,7 +1,7 @@
 .card {
 
-   width: 25rem;
-   height: 25rem;
+   width: 21rem;
+   height: 23rem;
    box-sizing: border-box;
    border: 1px solid white;
    background-color: white;
@@ -11,14 +11,14 @@
 
 .cal-new {
    background: white;
-   margin-left: 250px;
-   margin-top: 100px;
+   margin-left: 290px;
+   margin-top: 90px;
  
 }
 
 .trc-new {
 
-   margin-left: 700px;
-   margin-top: -420px;  
+   margin-left: 750px;
+   margin-top: -390px;  
 
 }
