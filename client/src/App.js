@@ -7,7 +7,6 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import Home from "./pages/Home";
 import Signup from "./pages/LogIn/Signup";
 import Dashboard from "./pages/dashboard";
 import { Calendar } from "react-modern-calendar-datepicker";
