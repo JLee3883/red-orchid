@@ -34,6 +34,14 @@ export const CREATE_FLOWTALK = gql`
   }
 `;
 
+export const REMOVE_FLOWTALK = gql`
+  mutation removeflowTalk($flowTalkId: ID!) {
+    removeflowTalk(flowTalkId: $flowTalkId) {
+      flowTalkTitle
+    }
+  }
+`;
+
 export const ADD_COMMENT = gql`
   mutation addComment($commentId: ID!, $commentText: String!) {
     addComment(commentId: $commentId, commentText: $commentText) {
