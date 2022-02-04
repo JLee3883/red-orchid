@@ -3,6 +3,8 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+
+
 console.log("This is add user", ADD_USER)
 const Register = () => {
   const [userFormData, setUserFormData] = useState({
