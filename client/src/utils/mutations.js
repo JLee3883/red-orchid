@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -16,7 +16,6 @@ export const ADD_USER = gql`
     addUser(username: $username, email: $email, password: $password) {
       token
       user {
-        _id
         username
       }
     }
@@ -24,15 +23,15 @@ export const ADD_USER = gql`
 `;
 
 export const CREATE_FLOWTALK = gql`
-mutation createFlowTalk($flowTalkTitle:String!, $flowTalkText:String!){
-  createFlowTalk(flowTalkTitle:$flowTalkTitle, flowTalkText:$flowTalkText){
-    _id
-    flowTalkTitle
-    flowTalkText
-    flowTalkAuthor
-    createdAt
+  mutation createFlowTalk($flowTalkTitle: String!, $flowTalkText: String!) {
+    createFlowTalk(flowTalkTitle: $flowTalkTitle, flowTalkText: $flowTalkText) {
+      _id
+      flowTalkTitle
+      flowTalkText
+      flowTalkAuthor
+      createdAt
+    }
   }
-}
 `;
 
 export const ADD_COMMENT = gql`
