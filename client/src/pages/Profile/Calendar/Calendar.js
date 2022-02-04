@@ -13,7 +13,8 @@ const Calendar = () => {
   const [selectedDay, setSelectedDay] = useState(defaultValue);
   return (
     <>
-    
+    <Card className="tracker-card" style={{ margin: "0 auto", background: "white" }}>
+      <Card.Body>
     <Calendar
       value={selectedDay}
       onChange={setSelectedDay}
@@ -22,6 +23,8 @@ const Calendar = () => {
       calendarTodayClassName="custom-today-day" // also this
       shouldHighlightWeekends
     />
+    </Card.Body>
+    </Card>
 
     </>
   );

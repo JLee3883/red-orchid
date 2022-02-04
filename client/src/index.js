@@ -5,8 +5,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import 'react-modern-calendar-datepicker/lib/DatePicker.css';
 
-// import reportWebVitals from './reportWebVitals';
-
 
 
 ReactDOM.render(

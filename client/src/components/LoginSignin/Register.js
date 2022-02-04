@@ -81,7 +81,7 @@ const Register = () => {
             onChange={handleInputChange}
             value={userFormData.username}
             required
-            style={{width: "18rem", borderColor: "palevioletred"}}
+            style={{width: "17rem", borderColor: "palevioletred", marginTop: "-2px"}}
           />
           <Form.Control.Feedback type="invalid">
             Username is required!
@@ -97,7 +97,7 @@ const Register = () => {
             onChange={handleInputChange}
             value={userFormData.email}
             required
-            style={{width: "18rem", borderColor: "palevioletred"}}
+            style={{width: "17rem", borderColor: "palevioletred", marginTop: "-2px"}}
           />
           <Form.Control.Feedback type="invalid">
             Email is required!
@@ -113,7 +113,7 @@ const Register = () => {
             onChange={handleInputChange}
             value={userFormData.password}
             required
-            style={{width: "18rem", borderColor: "palevioletred"}}
+            style={{width: "17rem", borderColor: "palevioletred", marginTop: "-2px" }}
           />
           <Form.Control.Feedback type="invalid">
             Password is required!
@@ -129,7 +129,7 @@ const Register = () => {
           }
           type="submit"
           variant="success"
-          style={{ margin: "20px", marginLeft: "230px", backgroundColor: "pink", borderColor: "palevioletred", color: "black" }}
+          style={{ margin: "20px", marginLeft: "190px", backgroundColor: "pink", borderColor: "palevioletred", color: "black" }}
         >
           Submit
         </Button>
