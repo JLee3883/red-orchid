@@ -28,10 +28,11 @@ Jennifer Lee, Jamie Chu, Elmira Tashvighi, Annie Nguyen
 https://red-orchid.herokuapp.com/
 https://github.com/JLee3883/red-orchid
 
-![LoginPage](client/src/images/redorchid1.png)
-![CreatePost](client/src/images/redorchid2.png)
-![SeePosts](client/src/images/redorchid3.png)
-![Calendar](client/src/images/redorchid4.png)
+![LoginPage](client/src/images/login.png)
+![Register](client/src/images/register.png)
+![CreatePost](client/src/images/create.png)
+![SeePosts](client/src/images/posts.png)
+![Calendar](client/src/images/calendar.png)
 
 
 ## Technologies Used 
