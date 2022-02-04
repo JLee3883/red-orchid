@@ -3,7 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-
+console.log("This is add user", ADD_USER)
 const Register = () => {
   const [userFormData, setUserFormData] = useState({
     username: '',
@@ -12,11 +12,9 @@ const Register = () => {
   });
   
   const [validated] = useState(false);
-  
   const [showAlert, setShowAlert] = useState(false);
-
-  const [addUser, { error }] = useMutation(ADD_USER);
-
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+  console.log(addUser)
   useEffect(() => {
     if (error) {
       setShowAlert(true);
@@ -32,15 +30,16 @@ const Register = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    
+    console.log(userFormData)
     const form = event.currentTarget;
+    // console.log(form.checkValidity())
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
 
     try {
+      console.log("inside try catch")
       const { data } = await addUser({
         variables: { ...userFormData },
       });
